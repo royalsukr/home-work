@@ -10,6 +10,7 @@ body{
     height: 100dvh;
     background-size: cover;
     display:flex;
+    padding-bottom: 130px;
     nav{
    background-color: $color;
    width: 244px;
@@ -19,6 +20,7 @@ body{
    margin-left: 42px;
    border-radius: 20px;
    height: 100%;
+   
    @include responsive(smartphone-portrait) {
     display: none;
    }
@@ -37,23 +39,22 @@ body{
     width: 100%;
     
 .profile{
-width: 95%;
+width:92%;
 height: 182px;
 background-color: $color;
 margin-left: 20px;
 margin-top: 66px;
 border-radius: 20px;
+@include responsive(smartphone-portrait) {
+    width: auto;
+    margin: 20px;
+    }
 .Explore{
     display: flex;
     justify-content: space-between;
     padding:20px ;
-  
-    .profile-img{
-        @include responsive(smartphone-portrait) {
-        size: 30px;
-        width: 150px;
-    }
-    }
+
+    
 
     .mentons{
         color: aliceblue;
@@ -76,13 +77,12 @@ padding-left:20px ;
 
 .phone-search{
     display: flex;
-    gap: 70px;
-
+    gap: 50%;
 }
 .settings{
     cursor: pointer;
     width: 40px;
-    @include responsive(tablet) {
+    @include responsive(laptop) {
         display: none;
     }
 }
@@ -120,17 +120,20 @@ padding-left:20px ;
 display: flex;
 @include responsive(smartphone-portrait) {
     display: contents;
-    align-items: center;
 }
 .mentors{
-    margin-left: 30px;
+    margin-left:20px ;
     background-color: #222338;
     width: 300px;
     height: 200px;
     margin-top: 20px;
     border-radius: 20px;
     padding: 10px;
-    
+    background-size: cover;
+    @include responsive(smartphone-portrait) {
+       margin: auto;
+       margin-top: 20px;
+    }
   .follow{
     display: flex;
     justify-content: space-between;

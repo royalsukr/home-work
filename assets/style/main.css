@@ -17,7 +17,18 @@ body nav {
   margin-top: 64px;
   margin-left: 42px;
   border-radius: 20px;
-  height: 80%;
+  height: 100%;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  body nav {
+    display: none;
+  }
 }
 body nav .nav__item {
   padding-top: 10px;
@@ -26,46 +37,156 @@ body nav .nav__item {
   margin-left: 40px;
   cursor: pointer;
 }
-body .profile {
-  width: 70%;
+body .n {
+  width: 100%;
+}
+body .n .profile {
+  width: 95%;
   height: 182px;
   background-color: #222338;
   margin-left: 20px;
   margin-top: 66px;
   border-radius: 20px;
 }
-body .profile .Explore {
+body .n .profile .Explore {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
-body .profile .Explore .mentons {
+body .n .profile .Explore .profile-img {
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  body .n .profile .Explore .profile-img {
+    size: 30px;
+    width: 150px;
+  }
+}
+body .n .profile .Explore .mentons {
   color: aliceblue;
   font-weight: 600;
   font-size: 30px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
 }
-body .profile .search {
+@media only screen and (max-width: 575.98px) {
+  body .n .profile .Explore .mentons {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+}
+body .n .profile .search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
 }
-body .profile .search .searching {
+body .n .profile .search .phone-search {
+  display: flex;
+  gap: 70px;
+}
+body .n .profile .search .settings {
+  cursor: pointer;
+  width: 40px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (min-width: 767.99px) and (max-width: 1199.97px) {
+  body .n .profile .search .settings {
+    display: none;
+  }
+}
+body .n .profile .search .searching {
   background: rgba(225, 225, 225, 0.2);
   border-radius: 50px;
   padding: 5px 10px;
   border: 1px solid aliceblue;
+  display: flex;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
 }
-body .profile .search .searching input {
+@media only screen and (max-width: 575.98px) {
+  body .n .profile .search .searching {
+    padding: 3px 5px;
+  }
+}
+body .n .profile .search .searching input {
   border: 0;
   background: transparent;
   outline: 0;
 }
-body .profile .search button {
+body .n .profile .search button {
   border: 1px;
   border-radius: 70px;
   color: white;
   padding: 14px 28px;
   background-color: #1B1C31;
   cursor: pointer;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  body .n .profile .search button {
+    display: none;
+  }
+}
+body .n .acount {
+  display: flex;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  body .n .acount {
+    display: contents;
+    align-items: center;
+  }
+}
+body .n .acount .mentors {
+  margin-left: 30px;
+  background-color: #222338;
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+body .n .acount .mentors .follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .n .acount .mentors .about-me {
+  color: #EBEDFA;
+  padding-top: 30px;
+}
+body .n .acount .mentors .img {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
 }/*# sourceMappingURL=main.css.map */

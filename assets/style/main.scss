@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: 100dvh;
     background-size: cover;
-display: flex;
+    display:flex;
     nav{
    background-color: $color;
    width: 244px;
@@ -18,8 +18,10 @@ display: flex;
    margin-top: 64px;
    margin-left: 42px;
    border-radius: 20px;
-   height: 80%;
-   
+   height: 100%;
+   @include responsive(smartphone-portrait) {
+    display: none;
+   }
     
 .nav__item{
     padding-top: 10px;
@@ -31,24 +33,38 @@ display: flex;
  
 }
 
-
+.n{
+    width: 100%;
+    
 .profile{
-width: 70%;
+width: 95%;
 height: 182px;
 background-color: $color;
 margin-left: 20px;
 margin-top: 66px;
 border-radius: 20px;
-
 .Explore{
     display: flex;
     justify-content: space-between;
     padding:20px ;
+  
+    .profile-img{
+        @include responsive(smartphone-portrait) {
+        size: 30px;
+        width: 150px;
+    }
+    }
 
     .mentons{
         color: aliceblue;
         font-weight: 600;
         font-size: 30px;
+        @include responsive(smartphone-portrait) {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 20px;
+            
+        }
     }
 }
 .search{
@@ -57,12 +73,29 @@ border-radius: 20px;
 justify-content: space-between;
 padding-left:20px ;
 
+
+.phone-search{
+    display: flex;
+    gap: 70px;
+
+}
+.settings{
+    cursor: pointer;
+    width: 40px;
+    @include responsive(tablet) {
+        display: none;
+    }
+}
+
 .searching{
     background:rgba(225,225,225,0.2);
     border-radius:  50px;
     padding: 5px 10px;
     border: 1px solid aliceblue;
-
+     display: flex;
+     @include responsive(smartphone-portrait) {
+        padding: 3px 5px;
+     }
     input{
         border: 0;
         background: transparent;
@@ -76,9 +109,46 @@ padding-left:20px ;
        padding: 14px 28px;
        background-color: $bg-color;
        cursor: pointer;
-    
+       @include responsive(smartphone-portrait) {
+        display: none;
+       }
     }
 }
 
 }
+.acount{
+display: flex;
+@include responsive(smartphone-portrait) {
+    display: contents;
+    align-items: center;
+}
+.mentors{
+    margin-left: 30px;
+    background-color: #222338;
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    
+  .follow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.about-me{
+    color: #EBEDFA ;
+    padding-top: 30px;
+}
+.img{
+display: flex;
+justify-content: space-between;
+padding-top: 50px;
+}
+
+ }   
+}
+}
+
+    
 }
